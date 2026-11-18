@@ -1,0 +1,19 @@
+FARECARE HACKATHON DEMO — NOV 17
+
+1. Extract this ZIP. Open FareCare_Complete_Demo in VS Code.
+2. Terminal A: cd backend
+   py -m venv .venv
+   .\.venv\Scripts\python.exe -m pip install -r requirements.txt
+   .\.venv\Scripts\python.exe -m pip install email-validator
+   .\.venv\Scripts\python.exe -m uvicorn app.main:app --reload
+3. Terminal B (from project root): cd frontend
+   py -m http.server 5500
+4. Visit http://localhost:5500
+5. Register passenger, book PCMC Metro -> Walhekarwadi (Rs 40).
+6. Register driver with licence and vehicle details. Driver account is pending approval for billing; dispatch simulation can be demonstrated locally.
+7. Login as driver, open driver dashboard, set simulated position to PCMC Metro and press Refresh requests. Accept passenger ride.
+8. Login passenger again, refresh passenger dashboard to see confirmed status.
+9. To test rejection when passed: create I-Venus -> Chapekar booking, then set driver position to Chapekar; Accept disabled.
+
+LIMITATIONS: Simulated driver GPS, no real route map matching, no real-time capacity enforcement, no real payment, no SOS. Driver account access and ride IDs are not protected with production authentication. DO NOT DEPLOY PUBLICLY.
+Map requires internet and geolocation permission. Fixed fares are sample values, not verified local tariffs.

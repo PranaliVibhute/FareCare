@@ -1,0 +1,1 @@
+Updated second independent route: K-Town Gate → Mukai Chowk ₹10; Mukai Chowk → Ravet Chowk ₹20; K-Town Gate → Ravet Chowk ₹30. Original PCMC Metro → I-Venus → Chapekar Chowk → Walhekarwadi route unchanged (₹20 + ₹10 + ₹10). This changes configured fares, not historical booked ride amounts. Driver movement and roadside GPS matching remain simulated. Restart backend and frontend.

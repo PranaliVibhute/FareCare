@@ -1,0 +1,9 @@
+FareCare 15 km map/autocomplete update
+
+Frontend: cd frontend; py -m http.server 5500
+Backend: cd backend; .\.venv\Scripts\python.exe -m uvicorn app.main:app --reload
+
+Map is square below the square vehicle image. Leaflet tiles clipped to map.
+Pickup and destination search match case-insensitive prefixes.
+On location permission, shared-auto pickup points are restricted to configured points geocoded within 15 km straight-line distance. No GPS permission = no radius filtering, clearly stated. Geocoding can fail and may be approximate; never treat as verified physical pickup stands.
+Fixed fares unchanged.

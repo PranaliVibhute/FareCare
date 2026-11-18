@@ -1,0 +1,1 @@
+Colored 34 x 44 px Leaflet pins, each clickable to select a valid downstream drop-off. Matching colored stop buttons below map also select and focus stops. Nominatim geocoding still requires internet; unavailable stops cannot be placed reliably without verified coordinates. No vehicle image or fare data changed.

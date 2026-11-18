@@ -1,0 +1,10 @@
+FareCare map pin update
+=======================
+- Original auto illustration dimensions restored. Map stays directly below the illustration.
+- Click a configured point marker on the Leaflet map to choose it as the main drop-off, after selecting a pickup.
+- Pins that are not downstream of the chosen pickup are rejected.
+- The 15 km filter is for nearby pickup fare points after browser location permission; it is not a live driver tracking service.
+
+CRITICAL: The existing backend does NOT implement driver GPS updates, road-network map matching, or the condition that a driver has not passed a new passenger. Existing demo matching is not a confirmed pickup or driver assignment. Do not present it as one.
+
+For real driver acceptance, the backend must: (1) receive recent consented driver GPS with timestamps; (2) snap the driver position to the planned road route; (3) verify the new passenger's actual GPS pickup is on the same directed road route within an allowed pickup tolerance; (4) verify the pickup lies ahead of the driver's route progress, not behind; (5) check seat capacity, timing and eligibility; (6) recheck atomically when accepting to avoid races. If GPS is stale or unavailable, do not confirm.

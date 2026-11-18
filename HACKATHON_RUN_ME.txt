@@ -1,0 +1,18 @@
+FARECARE HACKATHON DEMO — RUN LOCALLY
+
+1. Backend terminal (inside backend folder):
+   .\.venv\Scripts\python.exe -m pip install -r requirements.txt
+   .\.venv\Scripts\python.exe -m uvicorn app.main:app --reload
+   (If .venv does not exist, first run: py -m venv .venv)
+
+2. Frontend terminal (inside frontend folder):
+   py -m http.server 5500
+
+3. Open http://localhost:5500
+4. Create two passenger accounts using DIFFERENT emails and phones. Log in as passenger A and book Auto from VIT Pune to Swargate, for same date/time. Log out. Log in as passenger B and book identical Auto route/date/time with shared preference. Second booking should report a match. Log back in as passenger A; dashboard shows updated estimated share.
+
+SAMPLE PRICING: Auto ₹100, Sedan ₹240, XUV ₹360, Parcel ₹80, fixed route-independent sample fares. Shares divide base fare by total passengers in exact-route group. This is NOT segment-based fare splitting, geospatial matching, real fares or dispatch.
+
+KNOWN LIMITATIONS: No production authentication tokens, backend ride endpoints are not authenticated, no real GPS, payment, driver assignment, SOS dispatch, or verified Pink Mode. Do not expose this server publicly. Driver approvals require local admin API and payment recording is not secured. Use fictitious user information only.
+
+To see endpoints: http://127.0.0.1:8000/docs

@@ -1,0 +1,10 @@
+Booking update (17 Nov 2026)
+- Original auto image is unchanged.
+- Map is confined inside a square viewport below the image with explicit dimensions and tile clipping.
+- Person A / Person B selection added.
+- Both can request browser GPS pickup; Person B must provide GPS pickup before submitting.
+- Case-sensitive prefix filtering for pickup fare anchor and destination; select an actual dropdown option.
+- Person B destination must be selected from configured downstream fare points; free-text actual drop-off hidden.
+- Map pins select valid configured drop-off points.
+
+LIMITATIONS: The backend still calculates fixed fares using a configured main pickup anchor and configured destination. Person A cannot yet choose an arbitrary geographic drop-off with a dynamically calculated fare. GPS coordinates for Person B are recorded as descriptive pickup text only; the backend does NOT yet map-match roadside GPS to the driver's road path, so its current simulated stop-index check is not proof of safe eligibility. Do not present this as production dispatch. The frontend does not automatically infer a fare anchor from raw GPS.

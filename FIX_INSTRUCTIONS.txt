@@ -1,0 +1,11 @@
+FareCare booking selector fix
+
+1. Stop old frontend server with Ctrl+C.
+2. Open this extracted folder in VS Code.
+3. From frontend run: py -m http.server 5500
+4. Start backend from backend: .\.venv\Scripts\python.exe -m uvicorn app.main:app --reload (install requirements if needed).
+5. Visit http://localhost:5500/booking.html?vehicle=auto and hard refresh Ctrl+Shift+R.
+6. Select pickup first; valid downstream drop-offs are sorted alphabetically. Search boxes filter options.
+7. Backend /routes must be available. Fare rules remain fixed; no discounts.
+
+Do not serve project root; serve frontend folder.

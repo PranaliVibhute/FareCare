@@ -1,0 +1,1 @@
+Homepage correction: replaced misleading fare-splitting illustration with Passenger A private fare ₹100 → ₹60 after B boards for ₹30 and C boards for ₹10. Minimum shared-auto fare ₹40. Updated hero text, feature highlights and How It Works. Other frontend/backend files preserved from FareCare_Route_Based_Joining_Fares. These are illustrative prices, not a live Uber quote.

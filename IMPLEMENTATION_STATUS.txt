@@ -1,0 +1,21 @@
+FareCare update - 2026-11-17
+
+IMPLEMENTED:
+- Auto image retained unchanged; map clipped into a square below it, including on mobile.
+- Person A / Person B booking modes.
+- Current GPS pickup required for both modes; GPS coordinates saved separately in ride_geo.
+- Person A can select a map destination by clicking a map position; actual destination GPS saved.
+- Person B must choose a downstream configured drop-off from the case-sensitive prefix-filtered dropdown.
+- Case-sensitive prefix matching for pickup/drop-off fields.
+- Clickable common-point map pins for downstream drop-off selection.
+- Fixed fares per configured corridor; no pooling discounts.
+- Driver Accept/Reject/Complete interface; Person B roadside requests blocked from confirmation until road-route verification exists.
+
+NOT YET IMPLEMENTED (must not be claimed as working):
+- Reliable pricing for ANY arbitrary destination outside a configured fare corridor.
+- Actual road-polyline matching of Person B's roadside GPS pickup.
+- Real driver GPS tracking and verification that driver has not passed roadside pickup.
+- Seat capacity enforcement across multiple confirmed passengers and same-vehicle overlapping rides.
+- Production authentication/authorization and payments.
+
+The map needs internet for Leaflet/OSM/Nominatim. For best results open via http://localhost:5500 and grant location permission. This is a hackathon prototype, not a real dispatch service.
